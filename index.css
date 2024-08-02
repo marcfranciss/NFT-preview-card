@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+:root {
+  --primary: hsl(215, 51%, 70%);
+  --secondary: hsl(178, 100%, 50%);
+
+  --mainBG: hsl(217, 54%, 11%);
+  --cardBG: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  cursor: default;
+  scroll-behavior: smooth;
+  background-color: var(--mainBG);
+  font-family: "Outfit";
+  font-size: 18px;
+}
+main {
+  max-width: 1440px;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: clip;
+}
+
+.nft-card {
+  max-width: 350px;
+  /* height: 596px; */
+  padding: 24px;
+  border-radius: 15px;
+  background-color: var(--cardBG);
+  display: flex;
+  flex-direction: column;
+}
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+  height: 326px;
+  margin-bottom: 24px;
+  border-radius: 8px;
+}
+.img-container:hover .img-hover {
+  display: block;
+}
+.img-hover {
+  position: absolute;
+  display: none;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: hsl(178, 100%, 50%, 50%) url(./images/icon-view.svg) no-repeat
+    center;
+  cursor: pointer;
+}
+#modal {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 25%;
+  background-color: hsl(215, 32%, 27%, 0.8);
+  border: none;
+  cursor: pointer;
+}
+#modal img {
+  border-radius: 8px;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 16px;
+  font-weight: 400;
+
+  margin-bottom: 24px;
+}
+.details h1 {
+  color: var(--white);
+  margin-bottom: 16px;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.details h1:hover {
+  color: var(--secondary);
+}
+.details p {
+  color: var(--primary);
+  font-weight: 300;
+  line-height: 26px;
+  margin-bottom: 24px;
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 16px;
+  font-weight: 400;
+}
+.details .price h2,
+h3 {
+  font-size: inherit;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.details .price h2 {
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.details .price h2 .icon {
+  height: 18px;
+  width: 11px;
+  margin-right: 6.48px;
+}
+
+.details .price h3 {
+  color: var(--primary);
+  font-weight: 400;
+}
+.details .price h3 .icon {
+  height: 16px;
+  width: 16px;
+  margin-right: 7.7px;
+}
+hr {
+  border: 1px solid var(--line);
+  margin-bottom: 16px;
+}
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.profile .avatar {
+  width: 33px;
+  height: 33px;
+  border-radius: 50px;
+  margin-right: 16px;
+  border: 1px solid var(--white);
+  outline: none;
+}
+
+.profile p {
+  color: var(--primary);
+  font-size: 16px;
+}
+
+.profile p span {
+  color: var(--white);
+}
+
+.profile p span:hover {
+  color: var(--secondary);
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .nft-card {
+    width: 327px;
+  }
+  .img-container {
+    width: 278px;
+    height: 278px;
+  }
+  .details {
+    margin-bottom: 16px;
+  }
+  .details h1 {
+    margin-bottom: 12px;
+  }
+  .profile {
+    margin-bottom: 0;
+  }
+}
