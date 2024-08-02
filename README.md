@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/marcfranciss/NFT-preview-card.git)
-- Live Site URL: [Add live site URL here](https://marcfranciss.github.io/NFT-preview-card/)
+- Solution URL: [Github](https://github.com/marcfranciss/NFT-preview-card.git)
+- Live Site URL: [Webpage](https://marcfranciss.github.io/NFT-preview-card/)
 
 ### Built with
 
